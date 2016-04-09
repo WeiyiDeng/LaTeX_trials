@@ -1,0 +1,73 @@
+% w: not not leave spaces in environments !!
+
+% w: use chrome extension in combination with the following website to convert latex equations to word
+% https://cdn.mathjax.org/mathjax/latest/test/sample-dynamic-2.html
+% see readme file on https://github.com/idf/LaTex2Word-Equation for how to convert
+
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+
+This formula $f(x) = x^2$ is an example. \par             % use \par to start new paragraph
+$ \int^\infty_{-\infty} f(x)\,dx$   \par
+$ \left(\frac{1}{\sqrt{x}}\right)$  \par
+$ \left[\pm\frac{1}{\sqrt{e^x}}\right]$
+
+
+\begin{equation}
+\frac{\partial Q}{\partial t}
+\end{equation}
+
+
+\begin{equation}
+\begin{matrix}
+1 & 2\\
+5 & 9
+\end{matrix}
+\end{equation}
+
+
+\begin{equation*}
+  1 + 2 = 3 
+\end{equation*}
+
+\begin{equation*}
+  1 = 3 - 2
+\end{equation*}
+
+\begin{align*}
+  1 + 2 &= 3\\
+  1 &= 3 - 2
+\end{align*}
+
+
+\begin{align*}
+  f(x) &= x^2\\
+  g(x) &= \frac{1}{x}\\
+  F(x) &= \int^a_b \frac{1}{3}x^3\\
+  F(x) &= \int^\infty_c e^x\,dx\\                % my trials below
+  y &= \frac{1}{\sqrt{x}}\\
+  \int^\infty_0 e^{2x-1}\,dx\\
+  \int^\infty_c \exp{(x^3-1)}\,dx\\
+  \int \!\!\! \int_R f(x,y)\,dx\,dy\\
+%-----------------------------------
+% matrices only works in math environments (eg. under equation or align)
+\left[
+\begin{matrix}
+1 & 0\\
+0 & 1
+\end{matrix}
+\right]
+\end{align*}
+
+
+
+
+
+\end{document}
+
+
+
